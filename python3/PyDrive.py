@@ -16,10 +16,17 @@ for m in motors:
 #for m in motors:
 #    m.stop_action()
 
-time.sleep(3)
+for m in motors:
+    m.stop()
+    time.sleep(3)
 
 for m in motors:
     m.run_timed(time_sp = 5000, speed_sp = 600)
 
 cs = ev3.ColorSensor()
 print(cs.modes)
+
+ev3.Sound.speak("Hello Lego, I am a Robot and your friend").wait()
+
+
+
