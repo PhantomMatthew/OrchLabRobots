@@ -11,6 +11,7 @@ import time
 motors = [ev3.LargeMotor(address) for address in (ev3.OUTPUT_B, ev3.OUTPUT_C)]
 
 for m in motors:
+    m.reset()
     m.run_timed(time_sp = 5000, speed_sp = -600)
 
 #for m in motors:
