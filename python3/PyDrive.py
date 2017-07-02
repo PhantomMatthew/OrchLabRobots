@@ -8,7 +8,7 @@ import time
 #m2.run_timed(time_sp=100, speed_sp=500)
 
 
-motors = [ev3.LargeMotor(address) for address in (OUTPUT_B, OUTPUT_C)]
+motors = [ev3.LargeMotor(address) for address in (ev3.OUTPUT_B, ev3.OUTPUT_C)]
 
 for m in motors:
     m.run_timed(time_sp = 5000, speed_sp = -600)
