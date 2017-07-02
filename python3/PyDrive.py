@@ -1,4 +1,4 @@
-from ev3dev.auto import *
+import ev3dev.ev3 as ev3
 import time
 
 #m1 = Motor(OUTPUT_B)
@@ -7,7 +7,8 @@ import time
 #m1.run_timed(time_sp=100, speed_sp=500)
 #m2.run_timed(time_sp=100, speed_sp=500)
 
-motors = [LargeMotor(address) for address in (OUTPUT_B, OUTPUT_C)]
+
+motors = [ev3.LargeMotor(address) for address in (OUTPUT_B, OUTPUT_C)]
 
 for m in motors:
     m.run_timed(time_sp = 5000, speed_sp = -600)
@@ -19,3 +20,6 @@ time.sleep(3)
 
 for m in motors:
     m.run_timed(time_sp = 5000, speed_sp = 600)
+
+cs = ev3.ColorSensor()
+print(cs.modes)
