@@ -10,4 +10,4 @@ from ev3dev.auto import *
 motors = [LargeMotor(address) for address in (OUTPUT_B, OUTPUT_C)]
 
 for m in motors:
-    m.run_timed(time_sp = 1000, speed_sp = -600)
+    m.run_timed(time_sp = 5000, speed_sp = -600)
